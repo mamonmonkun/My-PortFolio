@@ -1,0 +1,51 @@
+:root {
+  --cream: #f5f0e8;
+  --dark: #1a1a2e;
+  --green: #4a7c59;
+  --gold: #c9a84c;
+  --mist: rgba(245, 240, 232, 0.72);
+  --glass: rgba(245, 240, 232, 0.18);
+}
+
+.bg-layer{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url('background.gif') center/cover no-repeat;
+  filter: brightness(0.38) saturate(0.8);
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.elements {
+  padding-top: 100px;
+  padding-bottom: 56px;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(245,240,232,0.22);
+  border-radius: 18px;
+  padding: 40px 48px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.35);
+}
+
+.porty {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+
+}
