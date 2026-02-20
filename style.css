@@ -1,15 +1,11 @@
-/* =========================
-   RESET
-========================= */
+/*RESET*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* =========================
-   VARIABLES
-========================= */
+/*VARIABLES*/
 :root {
   --cream: #f5f0e8;
   --dark: #1a1a2e;
@@ -18,9 +14,7 @@
   --glass: rgba(245, 240, 232, 0.18);
 }
 
-/* =========================
-   BODY
-========================= */
+/*BODY*/
 body {
   font-family: 'Cormorant Garamond', serif;
   color: var(--cream);
@@ -33,9 +27,7 @@ body {
   align-items: center;
 }
 
-/* =========================
-   BACKGROUND LAYERS
-========================= */
+/*BACKGROUND LAYERS*/
 .bg-layer {
   position: fixed;
   inset: 0;
@@ -44,9 +36,7 @@ body {
   filter: brightness(0.38) saturate(0.8);
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/*MAIN CONTAINER*/
 .site {
   position: relative;
   z-index: 2;
@@ -54,9 +44,7 @@ body {
   margin: 0 auto;
 }
 
-/* =========================
-   GLASS CARD
-========================= */
+/*GLASS CARD*/
 .glass_box {
   width: 60%;
   padding: 40px 48px;
@@ -70,9 +58,7 @@ body {
   box-shadow: 0 8px 48px rgba(0, 0, 0, 0.35);
 }
 
-/* =========================
-   HERO / ELEMENTS
-========================= */
+/*HERO / ELEMENTS*/
 .elements {
   padding: 100px 0 56px;
   text-align: center;
@@ -106,9 +92,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* =========================
-   SECTION LABEL
-========================= */
+/*SECTION LABEL*/
 .boxlabel {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
@@ -118,9 +102,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/*ABOUT*/
 .about-text {
   font-size: 19px;
   font-weight: 300;
@@ -128,9 +110,7 @@ body {
   opacity: 0.92;
 }
 
-/* =========================
-   TECH SKILLS
-========================= */
+/*TECH SKILLS*/
 .TechSkills {
   display: flex;
   flex-wrap: wrap;
@@ -148,9 +128,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* =========================
-   SOFT SKILLS
-========================= */
+/*SOFT SKILLS*/
 .SoftSkillsList {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -168,3 +146,117 @@ body {
   color: var(--gold);
   font-size: 10px;
 }
+
+/*Projects*/
+.cardbox {
+  background: rgba(74,124,89,0.12);
+  border: 1px solid rgba(74,124,89,0.3);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 12px;
+}
+
+.cardbox h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.cardbox p {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.78;
+  line-height: 1.7;
+}
+
+.badge {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 3px 10px;
+  background: rgba(74,124,89,0.3);
+  border-radius: 4px;
+  color: #8ecba0;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* ── Project Link ── */
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 10px;
+  color: var(--gold);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.project-link:hover {
+  background: rgba(201,168,76,0.22);
+  border-color: rgba(201,168,76,0.8);
+}
+
+.project-link .arrow {
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.project-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+/*Contact*/
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--cream);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.contact-link:hover { opacity: 1; color: var(--gold); }
+
+.contact-link .icon {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  min-width: 60px;
+  opacity: 0.9;
+}
+
+/*Divider*/
+.divider {
+  border: none;
+  border-top: 1px solid rgba(245,240,232,0.12);
+  margin: 24px 0;
+}
+
+/*Two-col*/
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+@media (max-width: 600px) {
+  .glass { padding: 28px 24px; }
+  .two-col { grid-template-columns: 1fr; }
+  .soft-list { grid-template-columns: 1fr; }
+}
+
