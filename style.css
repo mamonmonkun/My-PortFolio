@@ -1,0 +1,170 @@
+/* =========================
+   RESET
+========================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --cream: #f5f0e8;
+  --dark: #1a1a2e;
+  --green: #4a7c59;
+  --gold: #c9a84c;
+  --glass: rgba(245, 240, 232, 0.18);
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   BACKGROUND LAYERS
+========================= */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url('background.gif') center / cover no-repeat;
+  filter: brightness(0.38) saturate(0.8);
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.site {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+.glass_box {
+  width: 60%;
+  padding: 40px 48px;
+  margin-bottom: 28px;
+
+  background: var(--glass);
+  border: 1px solid rgba(245, 240, 232, 0.22);
+  border-radius: 18px;
+  backdrop-filter: blur(18px) saturate(1.4);
+
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   HERO / ELEMENTS
+========================= */
+.elements {
+  padding: 100px 0 56px;
+  text-align: center;
+}
+
+.elements .porty {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.elements h1 {
+  font-size: clamp(52px, 8vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.elements h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.elements .subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+.boxlabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-text {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.75;
+  opacity: 0.92;
+}
+
+/* =========================
+   TECH SKILLS
+========================= */
+.TechSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 30px;
+}
+
+.skill-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  padding: 6px 16px;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  border-radius: 40px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* =========================
+   SOFT SKILLS
+========================= */
+.SoftSkillsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.soft-skills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.soft-skills::before {
+  content: "✦";
+  color: var(--gold);
+  font-size: 10px;
+}
